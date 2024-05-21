@@ -3,10 +3,17 @@
 {% block content%}
 
     <h3>Posts</h3>
-    <ul>
+   
+    <div class="row">
         {% for post in posts %}
-          <li>{{ post.title }}</li>
-        {% endfor %}
-    </ul>
+        <div class="col-sm-4">
+        
+          <h2><a href="{{ url_for('updatepost', post_id=post.post_id)}}">{{ post.title }}</a></h2>
+          <p>{{ post.content }}</p>
+                
+        </div>
+        {% endfor %}    
+        
+    </div>
     
  {% endblock %}

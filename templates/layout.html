@@ -28,11 +28,12 @@
 	    </div>
 	    <ul class="nav navbar-nav">
 	      <li><a href="{{ url_for('home') }}">Home</a></li>
-	      <li><a href="#">Page 1</a></li>
+	      <li><a href="{{ url_for('dashboard')}}">Articles</a></li>
 	      <li><a href="#">Page 2</a></li>
 	    </ul>
 	    {% if 'user' in session %}
 	       <ul class="nav navbar-nav navbar-right">
+	       <li><a href="{{ url_for('add_post') }}"><span class="glyphicon glyphicon-user"></span> Write</a></li>
 	      <li><a href="{{ url_for('profile') }}"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
 	      <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-in"></span> Logout </a></li>
 	    </ul>
